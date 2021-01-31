@@ -1,0 +1,73 @@
+$orange: #ff4500;
+$light-blue: #e8e8f1;
+$dark-blue: #8888a8;
+$font-m: 1em;
+$font-l: 1.5em;
+$font-xl: 3em;
+$shadow-m: 0px 1px 1px #ffffff;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+
+h1 {
+    font-size: $font-xl;
+    color: $dark-blue;
+    padding: 0.5em;
+    text-align: center;
+    text-shadow: $shadow-m;
+}
+
+.container {
+    display: block;
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    background-color: $light-blue;
+    padding: 10px;
+}
+
+label {
+    padding: 0;
+    display: inline-block;
+    color: $dark-blue;
+    font-size: $font-m;
+}
+
+input[type=text] {
+    display: inline-block;
+    width: 100%;
+    border-radius: 8px;
+    padding: 12px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: $dark-blue;
+    margin: 10px auto;
+    color: $dark-blue;
+
+}
+
+
+::placeholder {
+    font-size: $font-m;
+    color: $dark-blue
+}
+
+.name-row {
+    display: inline-block;
+    width: calc(50% - 2px);
+    display: inline-block;
+    margin: auto;
+}
+
+input:focus {
+    border-color: $orange;
+}
+
+input:hover {
+    border-color: $orange;
+}
