@@ -20,20 +20,24 @@
         <![endif]-->
         
         <div class="container">
-        <div><h1>Quick Quote / Easy Form</h1></div>
-        <form action="quote.php">
+        <div><h1>Quick Quote Form</h1></div>
+        <form action="quote.php" method="post">
             
               <div class="name-row text-field">
-                <input type="text" id="fname" name="firstname" placeholder="" required>
+                <input type="text" id="fname" name="first_name" placeholder="" required data-validation-required-message="Please enter your name.">
                 <label>First Name</label>
               </div>
               <div class="name-row text-field">
-                <input type="text" id="lname" name="lastname" placeholder="" required>
+                <input type="text" id="lname" name="last_name" placeholder="" required>
                 <label>Last Name</label>
               </div>
               <div class="text-field">
                 <input type="text" id="mail" name="email" placeholder="" required>
                 <label>Email</label>
+              </div>
+              <div class="text-field">
+                <input type="text" id="phone" name="phone" placeholder="" required>
+                <label>Phone</label>
               </div>
               <div class="text-field">
                 <input type="text" id="fromaddress" name="fromaddress" placeholder="" required>
@@ -43,9 +47,9 @@
                 <input type="text" id="toaddress" name="toaddress" placeholder="" required>
                 <label>To Address</label>
               </div>
+              <button type="submit" value="submit" class="formbtn">Send Message</button>
         </form>
         </div>
-        
 
         <script src="" async defer></script>
     </body>

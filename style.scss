@@ -101,3 +101,24 @@ input[type=text] {
     display: inline-block;
     margin: auto;
 }
+
+.formbtn {
+    padding: 1em;
+    cursor: pointer;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    background-color: $dark-blue;
+    color: white;
+    font-weight: normal;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: $lighter-blue;
+        border-color: $dark-blue;
+        color: $orange;
+        transition: 0.2s;
+    }
+}
+
