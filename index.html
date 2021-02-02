@@ -22,20 +22,26 @@
         <div class="container">
         <div><h1>Quick Quote / Easy Form</h1></div>
         <form action="quote.php">
-            <div>
-                <label for="fname">Please complete all the fields required</label>
+            
+              <div class="name-row text-field">
+                <input type="text" id="fname" name="firstname" placeholder="" required>
+                <label>First Name</label>
               </div>
-              <div class="name-row">
-                <input type="text" id="fname" name="firstname" placeholder="First name...">
+              <div class="name-row text-field">
+                <input type="text" id="lname" name="lastname" placeholder="" required>
+                <label>Last Name</label>
               </div>
-              <div class="name-row">
-                <input type="text" id="lname" name="lastname" placeholder="Last name...">
+              <div class="text-field">
+                <input type="text" id="mail" name="email" placeholder="" required>
+                <label>Email</label>
               </div>
-              <div><input type="text" id="mail" name="email" placeholder="Email...">
+              <div class="text-field">
+                <input type="text" id="fromaddress" name="fromaddress" placeholder="" required>
+                <label>From Address</label>
               </div>
-              <div><input type="text" id="fromaddress" name="fromaddress" placeholder="From address...">
-              </div>
-              <div><input type="text" id="toaddress" name="toaddress" placeholder="To adress...">
+              <div class="text-field">
+                <input type="text" id="toaddress" name="toaddress" placeholder="" required>
+                <label>To Address</label>
               </div>
         </form>
         </div>

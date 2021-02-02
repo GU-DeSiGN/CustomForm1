@@ -1,6 +1,8 @@
 $orange: #ff4500;
 $light-blue: #e8e8f1;
+$lighter-blue: #fbfcff;
 $dark-blue: #8888a8;
+$green: #00dd55;
 $font-m: 1em;
 $font-l: 1.5em;
 $font-xl: 3em;
@@ -12,7 +14,6 @@ $shadow-m: 0px 1px 1px #ffffff;
     padding: 0;
     outline: none;
 }
-
 
 h1 {
     font-size: $font-xl;
@@ -28,33 +29,70 @@ h1 {
     margin: auto;
     border-radius: 10px;
     background-color: $light-blue;
-    padding: 10px;
+    padding: 1em;
 }
 
 label {
     padding: 0;
-    display: inline-block;
+    position: absolute;
     color: $dark-blue;
     font-size: $font-m;
+    left: 1em;
+    top: calc(50% - 0.6em);
+    pointer-events: none;
+    transition: 0.2s;
+}
+
+.text-field{
+    position: relative;
 }
 
 input[type=text] {
     display: inline-block;
     width: 100%;
     border-radius: 8px;
-    padding: 12px;
+    padding: 1em;
     border-style: solid;
     border-width: 1px;
     border-color: $dark-blue;
     margin: 10px auto;
     color: $dark-blue;
 
-}
+    &:hover {
+        border-color: $orange;
+        transition: 0.2s;
+    }
 
+    &:focus {
+        border-color: $orange;
+        background-color: $lighter-blue;
+    }
 
-::placeholder {
-    font-size: $font-m;
-    color: $dark-blue
+    &:focus ~ label {
+        top: -8px;
+        left: 0.5em;
+        transform-origin: top left;
+        transition: 0.2s;
+        scale: 0.8;
+    }
+
+    &:valid ~ label {
+        top: -8px;
+        left: 0.5em;
+        transform-origin: top left;
+        transition: 0.2s;
+        scale: 0.8;
+        text-shadow: 1px 0 0 white;
+    }
+
+    &:required {
+        box-shadow: none;
+    }
+
+    &:valid {
+        border-color: $green;
+        transition: 0.2s;
+    }
 }
 
 .name-row {
@@ -62,12 +100,4 @@ input[type=text] {
     width: calc(50% - 2px);
     display: inline-block;
     margin: auto;
-}
-
-input:focus {
-    border-color: $orange;
-}
-
-input:hover {
-    border-color: $orange;
 }
