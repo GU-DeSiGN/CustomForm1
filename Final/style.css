@@ -1,0 +1,243 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  background-color: #e8e8f1;
+}
+
+h2 {
+  font-size: 2em;
+  color: #8888a8;
+  padding: 0.8em;
+  text-align: center;
+  text-shadow: 0px 1px 1px #ffffff;
+}
+
+.container {
+  display: block;
+  width: 90%;
+  margin: 1em auto;
+  border-radius: 10px;
+  padding: 0.8em;
+  background-image: linear-gradient(120deg, #e2e2ea 0%, #e7e7ee 50%, #ebebf2 100%);
+  box-shadow: 6px 10px 16px rgba(16, 16, 16, 0.15), -6px -10px 16px rgba(255, 255, 255, 0.9);
+}
+
+label {
+  padding: 0;
+  position: absolute;
+  color: #8888a8;
+  font-size: 1em;
+  left: 1em;
+  right: 1em;
+  top: 1.4em;
+  pointer-events: none;
+  transition: 0.2s;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+label span {
+  font-size: 0.75em;
+}
+
+.text-field {
+  position: relative;
+}
+
+input, textarea {
+  display: inline-block;
+  width: 100%;
+  border-radius: 8px;
+  padding: 1em;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #8888a8;
+  margin: 10px auto;
+  color: #8888a8;
+}
+input:hover, textarea:hover {
+  border-color: #ff4500;
+  transition: 0.2s;
+}
+input:focus, textarea:focus {
+  border-color: #ff4500;
+  background-color: #fbfcff;
+}
+input:focus ~ label, textarea:focus ~ label {
+  top: -8px;
+  left: 0.5em;
+  transform-origin: top left;
+  transition: 0.2s;
+  scale: 0.8;
+  overflow-x: visible;
+}
+input:not(:-moz-placeholder-shown) + label, textarea:not(:-moz-placeholder-shown) + label {
+  top: -8px;
+  left: 0.5em;
+  transform-origin: top left;
+  -moz-transition: 0.2s;
+  transition: 0.2s;
+  scale: 0.8;
+}
+input:not(:-ms-input-placeholder) + label, textarea:not(:-ms-input-placeholder) + label {
+  top: -8px;
+  left: 0.5em;
+  transform-origin: top left;
+  -ms-transition: 0.2s;
+  transition: 0.2s;
+  scale: 0.8;
+}
+input:not(:placeholder-shown) + label, textarea:not(:placeholder-shown) + label {
+  top: -8px;
+  left: 0.5em;
+  transform-origin: top left;
+  transition: 0.2s;
+  scale: 0.8;
+}
+input:valid ~ label, textarea:valid ~ label {
+  top: -8px;
+  left: 0.5em;
+  transform-origin: top left;
+  transition: 0.2s;
+  scale: 0.8;
+  text-shadow: 1px 0 0 white;
+}
+input:required, textarea:required {
+  box-shadow: none;
+}
+input:valid, textarea:valid {
+  border-color: #00dd55;
+  transition: 0.2s;
+  background-color: #fbfcff;
+}
+input:not(:-moz-placeholder-shown):invalid, textarea:not(:-moz-placeholder-shown):invalid {
+  border-color: #ff4500;
+  background-color: #fbfcff;
+}
+input:not(:-ms-input-placeholder):invalid, textarea:not(:-ms-input-placeholder):invalid {
+  border-color: #ff4500;
+  background-color: #fbfcff;
+}
+input:not(:placeholder-shown):invalid, textarea:not(:placeholder-shown):invalid {
+  border-color: #ff4500;
+  background-color: #fbfcff;
+}
+
+select {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  padding: 1em;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #8888a8;
+  margin: 10px auto;
+  color: #8888a8;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+select:hover {
+  border-color: #ff4500;
+  transition: 0.2s;
+}
+select:focus {
+  border-color: #ff4500;
+  background-color: #fbfcff;
+}
+select:focus ~ label {
+  top: -8px;
+  left: 0.5em;
+  transform-origin: top left;
+  transition: 0.2s;
+  scale: 0.8;
+}
+select:valid ~ label {
+  top: -8px;
+  left: 0.5em;
+  transform-origin: top left;
+  transition: 0.2s;
+  scale: 0.8;
+  text-shadow: 1px 0 0 white;
+}
+select:required {
+  box-shadow: none;
+}
+select:valid {
+  border-color: #00dd55;
+  transition: 0.2s;
+}
+
+.select-custom {
+  position: relative;
+}
+.select-custom::after {
+  border-style: solid;
+  border-width: 0.25em 0.25em 0 0;
+  content: "";
+  display: inline-block;
+  height: 0.45em;
+  width: 0.45em;
+  transform: rotate(135deg);
+  position: absolute;
+  display: block;
+  right: 1em;
+  top: 1.5em;
+  color: #8888a8;
+  transition: 0.2s;
+  pointer-events: none;
+}
+
+.two-col {
+  display: inline-block;
+  width: calc(50% - 2px);
+  margin: auto;
+}
+
+.formbtn {
+  padding: 1em;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  background-color: #8888a8;
+  color: white;
+  font-weight: normal;
+  transition: 0.2s;
+}
+.formbtn:hover {
+  background-color: #fbfcff;
+  border-color: #8888a8;
+  color: #ff4500;
+  transition: 0.2s;
+}
+
+textarea {
+  resize: vertical;
+}
+textarea ~ label {
+  white-space: normal;
+  overflow: visible;
+}
+textarea:focus ~ label {
+  white-space: nowrap;
+}
+
+.success {
+  color: green;
+}
+
+.nosuccess {
+  color: #ff4500;
+}
+
+.contact_msg {
+  margin-top: 10px;
+}/*# sourceMappingURL=style.css.map */
